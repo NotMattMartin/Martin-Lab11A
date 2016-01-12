@@ -87,7 +87,13 @@ class Statistics
 	public void computeMode()
 	{
 		// precondition: The list array has exactly 1 mode.
-
+		for (int k = 0; k < size-1; k++)
+		{
+			int o = k + 1;
+			int p = list[k] + list[o];
+			if (p == list[k] * 2)
+				mode = list[k];
+		}
 
 	}
 
